@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-export const metadata = {
-  metadataBase: new URL("https://compress.nextooly.com"),
-  title: "Compress PDF Online – Reduce PDF File Size | Nextooly",
+export const metadata: Metadata = {
+  title: "Compress PDF Online – Reduce PDF Size Free | Nextooly",
   description:
-    "Compress PDF files online directly in your browser. No uploads. Fast, secure, and private PDF compression by Nextooly.",
+    "Compress PDF files online for free. Reduce PDF file size directly in your browser with no uploads. Fast, private, and secure PDF compression by Nextooly.",
   alternates: {
-    canonical: "https://compress.nextooly.com",
+    canonical: "https://compress.nextooly.com/",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
+
 
 export default function RootLayout({
   children,
