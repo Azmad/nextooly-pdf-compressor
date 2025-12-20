@@ -57,6 +57,29 @@ export const metadata: Metadata = {
     description: "Free PDF tools by Nextooly. 100% client-side, no uploads.",
     images: [`${SITE_URL}/main-logo.png`], 
   },
+  other: {
+  "application/ld+json": JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Nextooly PDF Tools",
+    applicationCategory: "UtilityApplication",
+    operatingSystem: "Web",
+    url: "https://pdf.nextooly.com",
+    description:
+      "Free online PDF tools by Nextooly to compress, protect, and unlock PDF files using 100% client-side processing.",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Nextooly",
+      url: "https://nextooly.com",
+    },
+  }),
+},
+
 };
 
 export default function RootLayout({
