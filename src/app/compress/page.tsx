@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "PDF Compressor",
+  title: "PDF Compressor Online – Reduce PDF Size Free | Nextooly",
   description:
-    "Compress PDF files online for free with Nextooly. Reduce PDF size directly in your browser with 100% client-side processing.",
+    "Compress PDF files online for free. Reduce PDF size without losing quality. 100% secure, browser-based PDF compressor by Nextooly.",
   alternates: {
     canonical: "/",
   },

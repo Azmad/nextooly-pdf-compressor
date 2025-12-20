@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Protect PDF",
+  title: "Protect PDF with Password – Secure PDF Online | Nextooly",
   description:
-    "Protect PDF files with a password using Nextooly. Encrypt PDFs locally in your browser with 100% client-side processing.",
+    "Protect PDF files with a password online. Encrypt PDFs securely in your browser. No uploads, no tracking, 100% private with Nextooly.",
   alternates: {
     canonical: "/protect-pdf",
   },

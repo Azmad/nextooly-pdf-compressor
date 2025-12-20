@@ -7,9 +7,9 @@ import { HowToGridSection, FaqListSection } from "@/components/tools/NextoolyCon
 
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Unlock PDF",
+  title: "Unlock PDF Online – Remove PDF Password Securely | Nextooly",
   description:
-    "Unlock password-protected PDF files using Nextooly. Remove PDF passwords locally in your browser with 100% client-side processing.",
+    "Unlock password-protected PDFs online. Remove PDF passwords securely in your browser with no uploads. Fast, private, and free by Nextooly.",
   alternates: {
     canonical: "/unlock-pdf",
   },
