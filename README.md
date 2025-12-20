@@ -1,56 +1,38 @@
 # Nextooly PDF Tools (AGPL)
 
-This repository contains the Nextooly PDF processing tools:
+**Live Demo:** https://pdf.nextooly.com
 
+This repository contains the source code for Nextooly’s browser-based PDF tools:
 - PDF Compressor
 - Protect PDF
 - Unlock PDF
 
-All tools run 100% client-side using WebAssembly (WASM).
-No files or passwords are uploaded to any server.
+All tools run **100% client-side** using WebAssembly (WASM).  
+No files, passwords, or user data are uploaded or stored.
 
----
+## License
 
-## Privacy & Security
+This project is licensed under the **GNU Affero General Public License v3 (AGPL-3.0)**.
 
-- All PDF processing happens locally in your browser
-- No server-side uploads
-- No file or password storage
-
----
-
-## License (IMPORTANT)
-
-This project is licensed under the GNU Affero General Public License v3 (AGPL-3.0).
-
-If you deploy this software publicly (as a website or SaaS),
-you MUST provide access to the complete corresponding source code
-of the deployed version.
+If you deploy this software publicly (website, SaaS, or network service), you **must provide access to the complete corresponding source code** of the deployed version to all users, as required by AGPL §13.
 
 Any derivative work must also be licensed under AGPL-3.0.
 
-Full license text:
-https://www.gnu.org/licenses/agpl-3.0.html
+License text: https://www.gnu.org/licenses/agpl-3.0.html
 
----
+## Architecture Note
 
-## Why this repository exists separately
-
-This repository is intentionally isolated to comply with AGPL
-requirements of PDF processing engines (e.g., MuPDF).
-
-The main Nextooly platform links to this application as a
-separate service and does not embed or bundle its code.
-
----
+This repository is intentionally isolated to comply with AGPL requirements of PDF processing engines.  
+The main platform (https://nextooly.com) links to this application as a separate service and does not embed or bundle this code.
 
 ## Development
 
 pnpm install  
 pnpm dev
 
----
+## Trademark
 
-## Attribution
+“Nextooly” and the Nextooly logo are trademarks of Nextooly.  
+This license does not grant permission to use the Nextooly name or branding without explicit permission.
 
-Copyright (c) Nextooly
+© 2025 Nextooly
