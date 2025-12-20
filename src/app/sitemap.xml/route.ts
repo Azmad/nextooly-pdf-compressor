@@ -1,21 +1,50 @@
 import { NextResponse } from "next/server";
 
-export const runtime = "edge";
+export async function GET() {
+  const baseUrl = "https://pdf.nextooly.com";
+  const now = new Date().toISOString();
 
-export function GET() {
-  const body = `<?xml version="1.0" encoding="UTF-8"?>
+  const urls = [
+    {
+      loc: `${baseUrl}/`,
+      changefreq: "weekly",
+      priority: "1.0",
+    },
+    {
+      loc: `${baseUrl}/compress`,
+      changefreq: "weekly",
+      priority: "0.9",
+    },
+    {
+      loc: `${baseUrl}/protect-pdf`,
+      changefreq: "weekly",
+      priority: "0.8",
+    },
+    {
+      loc: `${baseUrl}/unlock-pdf`,
+      changefreq: "weekly",
+      priority: "0.8",
+    },
+  ];
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls
+  .map(
+    (u) => `
   <url>
-    <loc>https://pdf.nextooly.com/</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+    <loc>${u.loc}</loc>
+    <lastmod>${now}</lastmod>
+    <changefreq>${u.changefreq}</changefreq>
+    <priority>${u.priority}</priority>
+  </url>`
+  )
+  .join("")}
 </urlset>`;
-  return new NextResponse(body, {
+
+  return new NextResponse(xml, {
     headers: {
-      "Content-Type": "application/xml; charset=utf-8",
-      "Cache-Control": "public, max-age=3600",
+      "Content-Type": "application/xml",
     },
   });
 }
