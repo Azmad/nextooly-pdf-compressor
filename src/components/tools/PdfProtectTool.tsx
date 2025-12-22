@@ -40,7 +40,7 @@ export default function PdfProtectTool() {
   const canProtect = useMemo(() => {
     return (
       !!file && 
-      userPassword.length > 0 && 
+      userPassword.length >= 6 && 
       userPassword === confirmPassword && 
       step !== "processing"
     );
@@ -155,10 +155,18 @@ export default function PdfProtectTool() {
                 type="password"
                 value={userPassword}
                 onChange={(e) => setUserPassword(e.target.value)}
-                placeholder="Enter password..."
-                className="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+                placeholder="Enter password (min 6 chars)..."
+                className={`w-full p-3 border rounded-xl outline-none transition-all ${
+                   userPassword.length > 0 && userPassword.length < 6
+                   ? "border-red-400 focus:ring-red-500"
+                   : "border-gray-300 focus:ring-blue-500"
+                }`}
                 autoFocus
               />
+              {/* Helper text for length */}
+              {userPassword.length > 0 && userPassword.length < 6 && (
+                <p className="text-red-500 text-xs mt-1">Password must be at least 6 characters.</p>
+              )}
             </div>
 
             <div>
